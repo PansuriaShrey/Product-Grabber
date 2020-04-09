@@ -17,21 +17,24 @@ def solve():
     flipkart(flipkart_url)
 
 def flipkart(flipkart_url):
-    list=requests.get(flipkart_url)
-    list=list.content
+    try:
+        list = requests.get( flipkart_url )
+        list = list.content
 
-    soup=BeautifulSoup(list,'lxml')
-    product=soup.findAll('a',{'class': '_2cLu-l'})
-    price=soup.findAll("div",{"class": "_1vC4OE"})
+        soup = BeautifulSoup( list , 'lxml' )
+        product = soup.findAll( 'a' , {'class': '_2cLu-l'} )
+        price = soup.findAll( "div" , {"class": "_1vC4OE"} )
 
-    if(len(product)==0 or len(price)==0):
-        product=soup.findAll('div',{'class': "_3wU53n"})
-        price=soup.findAll("div",{"class": "_1vC4OE _2rQ-NK"})
+        if (len( product ) == 0 or len( price ) == 0):
+            product = soup.findAll( 'div' , {'class': "_3wU53n"} )
+            price = soup.findAll( "div" , {"class": "_1vC4OE _2rQ-NK"} )
 
-    if(len(product)>0 and len(price)>0 ):
-        flipkart_money(product,price)
-    else:
-        print('Flipkart dont sell anything like these.')
+        if (len( product ) > 0 and len( price ) > 0):
+            flipkart_money( product , price )
+        else:
+            print( 'Flipkart dont sell anything like these.' )
+    except:
+        print('You dont have better internet connection. Hope you correct it.')
 
 def flipkart_money(product,price):
     print_product=product[0:5]

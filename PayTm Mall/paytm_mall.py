@@ -40,8 +40,15 @@ def printall(product,price):
     printall=[]
     num=min(len(allprice),len(allproduct))
     index=1
+    '''
+    try:
+        for i in allprice:
+            print(i.text[8:])
+    except:
+        print("Shrey Noob")
+    '''
     for i in range(num):
-        printall.append([index,allproduct[i].text,allprice[i].text])
+        printall.append([index,allproduct[i].text,allprice[i].text[8:]])
         index+=1
 
     print()
