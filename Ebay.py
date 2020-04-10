@@ -27,13 +27,13 @@ def ebay(url):
             idx=1
             results = []
             for i in range(n):
-                try:
-                    if (len(products[i].string)!=0):
-                        print(price[i].text)
-                        results.append( [idx, products[i].string , price[i].text] )
-                        idx+=1
-                except:
-                    temp=1
+                if products[i].string is not None:
+                    # print(price[i].text)
+                    # must have to check for the price whihc are of type "INR 20 to INR 40"
+                    #price[i].text = update( price[i].text )
+                    #print( price[i].text )
+                    results.append( [idx , products[i].string , update( price[i].text )] )
+                    idx += 1
                 if (idx==6):
                     break;
             print( tabulate( results , headers = ["Index" ,"Product on Ebay" , "Price"] , tablefmt = "fancy_grid" ) )
@@ -42,6 +42,14 @@ def ebay(url):
     except:
         print( " Please check your internet connection and try again." )
 
+def update(str):
+    finalstring=str[0:4]
+    for i in range(4,len(str)):
+        if(str[i]==' '):
+            break
+        else:
+            finalstring+=str[i]
+    return finalstring
 
 if __name__=='__main__':
     print('\n----------- Welcome to Ebay Price Comparison ------------\n')
