@@ -3,22 +3,22 @@ import requests
 from tabulate import tabulate
 
 def solve():
-    snapdeal_url="https://paytmmall.com/shop/search?q="
+    paytm_url="https://paytmmall.com/shop/search?q="
 
     words=input('Enter Product :')
     words=words.split()
 
     for i in words:
-        snapdeal_url+=i
-        snapdeal_url+="%20"
-    snapdeal_url = snapdeal_url[:-3]
+        paytm_url+=i
+        paytm_url+="%20"
+    paytm_url = paytm_url[:-3]
 
-    print('Website if you want to visit the store : ',snapdeal_url)
-    snapdeal(snapdeal_url)
+    print('Website if you want to visit the store : ',paytm_url)
+    paytm_mall(paytm_url)
 
-def snapdeal(snapdeal_url):
+def paytm_mall(paytm_url):
     try:
-        list=requests.get(snapdeal_url)
+        list=requests.get(paytm_url)
         list=list.content
 
         soup=BeautifulSoup(list,"lxml")
