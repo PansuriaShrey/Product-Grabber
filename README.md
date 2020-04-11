@@ -4,13 +4,13 @@
 This Apllication basically compares products of different E-commerce website with help of web-scraping using BeautifulSoup and Requests.
 
 ## How to run the code :
-Environment:- Python 3.7
-Dependencies :-  
-  1.Tkinter
-  2.Beautiful Soup
-  3.Requests
-  4.Webbrouser
-  5.Tabulate
+Environment :- Python 3.7 <br>
+Dependencies:- 
+    1.Tkinter
+    2.Beautiful Soup
+    3.Requests
+    4.Webbrouser
+    5.Tabulate <br>
 How to run the code :- masterproject.py  
 
 ## Major/Minor areas of specifications:
@@ -22,4 +22,4 @@ Slightly involved: Analysis of HTML codes.
 ## Project Contributers :
   ### Shrey Pansuria (18BCE224)
   ### Yash Thakkar (18BCE241)
-  Prepared Under the Guidance of <h4>Dwijesh Bhatt </h4>Sir.
+  Prepared Under the Guidance of <b>Dwijesh Bhatt</b> Sir.
