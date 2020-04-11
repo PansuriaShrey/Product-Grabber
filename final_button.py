@@ -49,11 +49,11 @@ def checkFlp():
     op='Website if you want to visit the store : '
     #print(op)
     labeloutput=Label(root,text=op)
-    labeloutput.place(anchor=CENTER,relx=0.25,rely=0.37,relheight=0.04,relwidth=0.4)
+    labeloutput.place(anchor=CENTER,relx=0.25,rely=0.37,relheight=0.04,relwidth=0.2)
     link=Button(root,text="FlipKart",fg="blue",cursor="hand2")
     link.pack()
     link.bind("<Button-1>",lambda e:callback(flipkart_url))
-    link.place(x=450,y=262)
+    link.place(relx=.36,rely=0.35,relheight=0.04)
     flipkart(flipkart_url)
 
 def flipkart(flipkart_url):
@@ -124,11 +124,11 @@ def checkebay():
 
     op= 'Website if you want to visit the store : '
     labeloutput = Label( root , text = op )
-    labeloutput.place(anchor=CENTER,relx=0.75,rely=0.37,relheight=0.04,relwidth=0.4)
+    labeloutput.place(anchor=CENTER,relx=0.75,rely=0.37,relheight=0.04,relwidth=0.2)
     link=Button(root,text="Ebay",fg="blue",cursor="hand2")
     link.pack()
     link.bind("<Button-1>",lambda e:callback(ebay_url))
-    link.place(x=1135,y=262)
+    link.place(relx=.86,rely=0.35,relheight=0.04)
     ebay( ebay_url )
 
 def ebay(url):
@@ -198,11 +198,11 @@ def checkSnapdeal():
     op = 'Website if you want to visit the store : '
 
     labeloutput = Label( root , text = op )
-    labeloutput.place( anchor = CENTER , relx = 0.75 , rely = 0.59 , relheight = 0.04 , relwidth = 0.4 )
+    labeloutput.place( anchor = CENTER , relx = 0.75 , rely = 0.59 , relheight = 0.04 , relwidth = 0.2 )
     link=Button(root,text="SnapDeal",fg="blue",cursor="hand2")
     link.pack()
     link.bind("<Button-1>",lambda e:callback(snapdeal_url))
-    link.place(x=1135,y=427)
+    link.place(relx=.36,rely=0.57,relheight=0.04)
     snapdeal( snapdeal_url )
 
 
@@ -256,11 +256,11 @@ def checkShopclue():
 
     op='Website if you want to visit the store : '
     labeloutput = Label( root , text = op )
-    labeloutput.place( anchor = CENTER , relx = 0.25 , rely = 0.59 , relheight = 0.04 , relwidth = 0.4 )
+    labeloutput.place( anchor = CENTER , relx = 0.25 , rely = 0.59 , relheight = 0.04 , relwidth = 0.2 )
     link=Button(root,text="ShopClues",fg="blue",cursor="hand2")
     link.pack()
     link.bind("<Button-1>",lambda e:callback(shop_url))
-    link.place(x=450,y=427);
+    link.place(relx=.86,rely=0.57,relheight=0.04)
     shopclue( shop_url )
 
 def shopclue(shop_url):
@@ -323,11 +323,11 @@ def checkPaytmMall():
 
     op='Website if you want to visit the store : '
     labeloutput = Label( root , text = op )
-    labeloutput.place( anchor = CENTER , relx = 0.5 , rely = 0.81 , relheight = 0.04 , relwidth = 0.4 )
+    labeloutput.place( anchor = CENTER , relx = 0.5 , rely = 0.81 , relheight = 0.04 , relwidth = 0.2 )
     link=Button(root,text="PaytmMall",fg="blue",cursor="hand2")
     link.pack()
     link.bind("<Button-1>",lambda e:callback(paytm_url))
-    link.place(x=800,y=590)
+    link.place(relx=.61,rely=0.79,relheight=0.04)
     paytm_mall(paytm_url)
 
 def paytm_mall(paytm_url):
